@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Movie Catalog</string>
+    <string name="movies">Movies</string>
+    <string name="tv_show">Tv show</string>
+    <string name="poster">Image poster</string>
+    <string name="title">Title</string>
+    <string name="release_date">Release date : %s</string>
+    <string name="btn_share">Button share</string>
+    <string name="btn_open">Button open homepage</string>
+    <string name="link">Open Link %s</string>
+    <string name="share_movies">Share link movies The Movie DB</string>
+    <string name="share_tv_show">Share link tv show The Movie DB</string>
+    <string name="poster_path">https://image.tmdb.org/t/p/w500</string>
+    <string name="movie_share_link">https://www.themoviedb.org/movie/%d</string>
+    <string name="tv_show_share_link">https://www.themoviedb.org/tv/%d</string>
+    <string name="first_air_date">First air date : %s</string>
+    <string name="_5_0">5.0</string>
+    <string name="original_language">Language : %s</string>
+</resources>
