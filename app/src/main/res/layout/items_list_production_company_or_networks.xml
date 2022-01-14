@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_company_or_network_logo_path"
+        android:layout_width="@dimen/poster_width"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/poster"
+        app:shapeAppearanceOverlay="@style/RoundSquare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_company_or_network_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/img_company_or_network_logo_path"
+        app:layout_constraintStart_toStartOf="@+id/img_company_or_network_logo_path"
+        app:layout_constraintTop_toBottomOf="@+id/img_company_or_network_logo_path"
+        tools:text="@string/title" />
+
+    <TextView
+        android:id="@+id/tv_company_or_network_origin_country"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/tv_company_or_network_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_company_or_network_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_company_or_network_name"
+        tools:text="@string/origin_country" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

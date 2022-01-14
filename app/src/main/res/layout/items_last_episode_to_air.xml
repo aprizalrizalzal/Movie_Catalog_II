@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/margin_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_air_air_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textSize="12sp"
+        android:layout_marginStart="@dimen/margin_horizontal"
+        app:layout_constraintStart_toEndOf="@+id/img_air_still_path"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/air_date" />
+
+    <TextView
+        android:id="@+id/tv_air_episode_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/tv_air_air_date"
+        app:layout_constraintTop_toBottomOf="@id/tv_air_air_date"
+        tools:text="@string/episode_number" />
+
+    <TextView
+        android:id="@+id/tv_air_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textSize="14sp"
+        android:layout_marginTop="@dimen/margin_vertical"
+        app:layout_constraintStart_toStartOf="@id/tv_air_episode_number"
+        app:layout_constraintTop_toBottomOf="@id/tv_air_episode_number"
+        android:textStyle="bold"
+        tools:text="@string/name" />
+
+    <TextView
+        android:id="@+id/tv_air_overview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_air_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_air_name"
+        tools:text="@tools:sample/lorem/random" />
+
+    <TextView
+        android:id="@+id/tv_air_production_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/tv_air_overview"
+        app:layout_constraintTop_toBottomOf="@id/tv_air_overview"
+        tools:text="@string/production_code" />
+
+    <TextView
+        android:id="@+id/tv_air_season_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/tv_air_production_code"
+        app:layout_constraintTop_toBottomOf="@id/tv_air_production_code"
+        tools:text="@string/season_number" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_air_still_path"
+        android:layout_width="@dimen/poster_width"
+        android:layout_height="@dimen/poster_height"
+        android:contentDescription="@string/poster"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/RoundSquare"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <RatingBar
+        android:id="@+id/air_rating_bar"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_horizontal"
+        app:layout_constraintStart_toStartOf="@+id/img_air_still_path"
+        app:layout_constraintTop_toBottomOf="@+id/img_air_still_path" />
+
+    <TextView
+        android:id="@+id/tv_air_vote_average"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginStart="@dimen/margin_horizontal"
+        app:layout_constraintStart_toEndOf="@id/air_rating_bar"
+        app:layout_constraintTop_toTopOf="@id/air_rating_bar"
+        tools:text="@string/_5_0" />
+
+    <TextView
+        android:id="@+id/tv_air_vote_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/air_rating_bar"
+        app:layout_constraintTop_toBottomOf="@id/air_rating_bar"
+        tools:text="@string/vote_count" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

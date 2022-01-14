@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_detail_collection_or_air"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/tv_detail_overview"
+        app:layout_constraintStart_toStartOf="@+id/img_detail_poster_path"
+        app:layout_constraintTop_toBottomOf="@+id/img_detail_poster_path">
+
+        <TextView
+            android:id="@+id/tv_detail_belong_to_collection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_vertical"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="@string/belong_to_collection" />
+
+        <include
+            android:id="@+id/detail_belong_to_collection"
+            layout="@layout/items_belong_to_collection"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_detail_seasons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_vertical"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="@string/seasons" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_detail_seasons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_detail_last_episode_to_air"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_vertical"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="@string/last_episode_to_air" />
+
+        <include
+            android:id="@+id/detail_last_episode_to_air"
+            layout="@layout/items_last_episode_to_air"
+            android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linearLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="@dimen/margin_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_detail_production_companies"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_vertical"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        tools:text="@string/production_companies" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_detail_production_companies"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_production_countries"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_vertical"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        tools:text="@string/production_countries" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_detail_production_countries"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/margin_horizontal"
+                    android:layout_toEndOf="@+id/linearLeft"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_detail_networks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_vertical"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:text="@string/network" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_detail_networks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_spoken_languages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_vertical"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        tools:text="@string/spoken_languages" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_detail_spoken_languages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_detail_created_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_vertical"
+            tools:text="@string/created_by" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_detail_created_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_detail_genres"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_detail_runtime"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_runtime"
+        tools:text="@string/genre" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_detail_genres"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_detail_genres"
+        app:layout_constraintEnd_toEndOf="@+id/tv_detail_runtime"
+        app:layout_constraintStart_toEndOf="@+id/tv_detail_genres"
+        app:layout_constraintTop_toTopOf="@+id/tv_detail_genres"
+        tools:listitem="@layout/items_list_genre" />
+
+    <TextView
+        android:id="@+id/tv_detail_original_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/detail_rating_bar"
+        app:layout_constraintTop_toBottomOf="@+id/detail_rating_bar"
+        tools:text="@string/original_language" />
+
+    <TextView
+        android:id="@+id/tv_detail_overview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_horizontal"
+        android:maxLines="4"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_detail_poster_path"
+        app:layout_constraintEnd_toEndOf="@+id/tv_detail_status"
+        app:layout_constraintStart_toStartOf="@+id/detail_rating_bar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_original_language"
+        tools:text="@tools:sample/lorem/random" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_detail_poster_path"
+        android:layout_width="@dimen/detail_poster_width"
+        android:layout_height="@dimen/detail_poster_height"
+        android:layout_margin="@dimen/margin_horizontal"
+        android:contentDescription="@string/poster"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundSquare"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_detail_release_or_first_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/img_detail_btn_link"
+        app:layout_constraintStart_toStartOf="@+id/tv_detail_title_or_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_title_or_name"
+        tools:text="@string/release_date" />
+
+    <TextView
+        android:id="@+id/tv_detail_runtime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_detail_release_or_first_date"
+        app:layout_constraintStart_toStartOf="@+id/tv_detail_release_or_first_date"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_release_or_first_date"
+        tools:text="@string/runtime" />
+
+    <TextView
+        android:id="@+id/tv_detail_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:maxLines="2"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/rv_detail_genres"
+        app:layout_constraintStart_toStartOf="@+id/tv_detail_genres"
+        app:layout_constraintTop_toBottomOf="@+id/rv_detail_genres"
+        tools:text="@string/status" />
+
+    <TextView
+        android:id="@+id/tv_detail_title_or_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_vertical"
+        android:maxLines="2"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/img_detail_btn_link"
+        app:layout_constraintStart_toEndOf="@+id/img_detail_poster_path"
+        app:layout_constraintTop_toTopOf="@+id/img_detail_poster_path"
+        tools:text="@string/title" />
+
+    <ImageButton
+        android:id="@+id/img_detail_btn_link"
+        style="@style/Widget.AppCompat.ActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_horizontal"
+        android:contentDescription="@string/btn_open"
+        app:layout_constraintBottom_toTopOf="@+id/tv_detail_release_or_first_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_detail_title_or_name"
+        tools:src="@drawable/ic_baseline_open_in_new" />
+
+    <RatingBar
+        android:id="@+id/detail_rating_bar"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/tv_detail_status"
+        app:layout_constraintTop_toBottomOf="@+id/tv_detail_status" />
+
+    <TextView
+        android:id="@+id/tv_detail_vote_average"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_horizontal"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_rating_bar"
+        app:layout_constraintStart_toEndOf="@+id/detail_rating_bar"
+        app:layout_constraintTop_toTopOf="@+id/detail_rating_bar"
+        tools:text="@string/_5_0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

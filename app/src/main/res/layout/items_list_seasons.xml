@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tv_seasons_air_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_horizontal"
+        android:maxLines="2"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/img_seasons_poster_path"
+        app:layout_constraintTop_toTopOf="@+id/img_seasons_poster_path"
+        tools:text="@string/air_date" />
+
+    <TextView
+        android:id="@+id/tv_seasons_episode_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_seasons_air_date"
+        app:layout_constraintTop_toBottomOf="@+id/tv_seasons_air_date"
+        tools:text="@string/episode_count" />
+
+    <TextView
+        android:id="@+id/tv_seasons_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_seasons_episode_count"
+        app:layout_constraintTop_toBottomOf="@+id/tv_seasons_episode_count"
+        tools:text="@string/name" />
+
+    <TextView
+        android:id="@+id/tv_seasons_overview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_season_number"
+        app:layout_constraintTop_toBottomOf="@+id/tv_season_number"
+        tools:text="@tools:sample/lorem/random" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_seasons_poster_path"
+        android:layout_width="@dimen/poster_width"
+        android:layout_height="@dimen/poster_height"
+        android:contentDescription="@string/poster"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundSquare"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_season_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_seasons_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_seasons_name"
+        tools:text="@string/season_number" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
